@@ -1,0 +1,25 @@
+---
+import Button from './Button.astro';
+---
+
+<nav class="flex items-center justify-between px-[30px] py-[25px] gap-[25px] border-b border-[#EBEBEB] bg-white">
+	<div class="flex items-center gap-[25px]">
+		<a href="/" class="flex items-center">
+			<img 
+				src="/flat-roof-llc-logo-text-black.svg" 
+				alt="Flat Roof LLC" 
+				class="h-[15px] w-auto"
+			/>
+		</a>
+	</div>
+	
+	<div class="flex items-center gap-[25px] ml-auto">
+		<a href="#" class="text-brand-primary text-button hover:opacity-80 transition-opacity">
+			Talk to an expert
+		</a>
+		<Button href="#" variant="dark">
+			Book an inspection
+		</Button>
+	</div>
+</nav>
+
