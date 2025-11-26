@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<p class="instructions">
+			To get started, open the directory <code>src/pages</code> in your project.<br />
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<li class="link-card">
+				<a href="https://docs.astro.build/">
+					<h2>
+						Documentation
+						<span>&rarr;</span>
+					</h2>
+					<p>
+						Learn how Astro works and explore the official API docs.
+					</p>
+				</a>
+			</li>
+			<li class="link-card">
+				<a href="https://astro.build/integrations/">
+					<h2>
+						Integrations
+						<span>&rarr;</span>
+					</h2>
+					<p>
+						Supercharge your project with new frameworks and libraries.
+					</p>
+				</a>
+			</li>
+			<li class="link-card">
+				<a href="https://astro.build/themes/">
+					<h2>
+						Themes
+						<span>&rarr;</span>
+					</h2>
+					<p>
+						Explore a galaxy of community-built starter themes.
+					</p>
+				</a>
+			</li>
+			<li class="link-card">
+				<a href="https://astro.build/chat/">
+					<h2>
+						Community
+						<span>&rarr;</span>
+					</h2>
+					<p>
+						Come say hi to our amazing Discord community. ✨
+					</p>
+				</a>
+			</li>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		max-width: 800px;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		line-height: 1;
+		margin: 1rem 0 2rem;
+		text-align: center;
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	.instructions {
+		margin: 2rem 0;
+		padding: 1.5rem;
+		border-radius: 8px;
+		background-color: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.instructions code {
+		background-color: rgba(255, 255, 255, 0.1);
+		padding: 0.2rem 0.4rem;
+		border-radius: 4px;
+		font-size: 0.9em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1.5rem;
+		padding: 0;
+		margin: 2rem 0;
+	}
+
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 0;
+		background-color: rgba(255, 255, 255, 0.05);
+		background-image: none;
+		background-size: 400%;
+		border-radius: 8px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		transition: border-color 0.3s;
+	}
+
+	.link-card:hover {
+		border-color: rgba(255, 255, 255, 0.3);
+		transform: translateY(-2px);
+		transition: all 0.3s;
+	}
+
+	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: 1.5rem;
+		border-radius: 7px;
+		color: white;
+		background-color: transparent;
+		opacity: 0.8;
+	}
+
+	.link-card > a > h2 {
+		margin: 0;
+		font-size: 1.25rem;
+		transition: color 0.3s;
+	}
+
+	.link-card > a > h2 span {
+		display: inline-block;
+		transition: transform 0.3s;
+	}
+
+	.link-card:hover > a > h2 span {
+		transform: translateX(2px);
+	}
+
+	.link-card > a > p {
+		margin: 0.5rem 0 0;
+		color: rgba(255, 255, 255, 0.6);
+	}
+</style>
+
